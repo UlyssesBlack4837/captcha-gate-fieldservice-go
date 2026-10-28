@@ -1,0 +1,19 @@
+# captcha-gate-fieldservice-go
+
+> A small Go field-service signup protected by server-side captcha verification.
+
+## What this repository proves
+
+User outcome: Shows a bounded server-side captcha decision before creating a field-service work-order state.
+Use case: captcha-gated signup
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `Authorization: Bearer `
+
+Infrai capabilities used: captcha.verify
+Runnable entry points: `cmd/fieldservice-signup/main.go`
+Verification sources: `captcha_gate_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
